@@ -32,11 +32,12 @@ export class UpdateEmployeeComponent implements OnInit {
     this.employeeService.updateEmployee(this.id, this.employee)
       .subscribe(data => console.log(data), error => console.log(error));
     this.employee = new Employee();
-    this.gotoList();
+    
   }
 
   onSubmit() {
-    this.updateEmployee();    
+    this.updateEmployee();
+    this.gotoList();
   }
 
   gotoList() {
